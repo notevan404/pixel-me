@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Me</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div class="game">
+
+        <!-- Fondo -->
+        <img src="assets/room.png" class="background" draggable="false">
+
+        <!-- Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Personaje -->
+        <img id="character" src="assets/idle_1.png" class="character">
+
+        <!-- HITBOXES  -->
+        <div id="pc" class="object" data-name="PC"></div>
+        <div id="coffee" class="object" data-name="Coffee"></div>
+        <div id="poster" class="object" data-name="Poster"></div>
+        <div id="snes" class="object" data-name="SNES"></div>
+        <div id="window" class="object" data-name="Window"></div>
+        <div id="bed" class="object" data-name="Bed"></div>
+
+        <audio id="clickSound" src="assets/click.mp3"></audio>
+
+        <!-- Textos -->
+        <div class="dialogue-box">
+            <p id="text">Click on something!!</p>
+        </div>
+
+        <audio id="bgMusic" src="assets/music.wav" loop></audio>
+        <audio id="clickSound" src="assets/click.mp3"></audio>
+
+        <button id="muteBtn">🔊</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
