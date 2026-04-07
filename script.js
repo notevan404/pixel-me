@@ -89,7 +89,7 @@ function interact(element, dialogue, id) {
 
     if (discovered.size === TOTAL_OBJECTS) {
         setTimeout(() => {
-            typeText("Has descubierto todo sobre mí 👀 Gracias por jugar!");
+            typeText("You've discovered everything! Thanks for playing.");
         }, 2000);
     }
 
