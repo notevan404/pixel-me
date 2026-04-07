@@ -56,11 +56,21 @@ function typeText(message) {
 
 /* FUNCION PARA QUE MIRE */
 function lookAt(direction) {
-    const base = "translateX(-50%) scale(4)";
+    const currentTransform = window.getComputedStyle(character).transform;
+
+    // extraer el scale actual (aprox)
+    let scale = 4; // fallback
+
+    if (currentTransform !== "none") {
+        const values = currentTransform.split("(")[1].split(")")[0].split(",");
+        const scaleX = values[0];
+        scale = Math.abs(scaleX);
+    }
+
     character.style.transform =
         direction === "right"
-            ? `${base} scaleX(1)`
-            : `${base} scaleX(-1)`;
+            ? `translateX(-50%) scale(${scale}) scaleX(1)`
+            : `translateX(-50%) scale(${scale}) scaleX(-1)`;
 }
 
 /* DIRECCIÓN */
